@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
     android:paddingTop="@dimen/inner_frame_layout_padding"
     android:paddingBottom="@dimen/inner_frame_layout_padding"
-    android:gravity="center"
-    android:layout_gravity="center"
-    android:orientation="vertical"
     tools:context=".MainActivity"
     tools:deviceIds="wear">
 
     <RelativeLayout
         android:id="@+id/launch_touchlock_pref"
+        style="@style/SettingPrefLayoutStyle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/SettingPrefLayoutStyle">
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/launch_touchlock_icon"
@@ -36,8 +36,8 @@
             android:id="@+id/launch_touchlock_pref_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/launch_touchlock_icon"
             android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/launch_touchlock_icon"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
             android:gravity="center_vertical"
@@ -45,25 +45,25 @@
             android:text="@string/title_start_touchlock"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textSize="14sp"
-            app:autoSizeTextType="uniform"
             app:autoSizeMaxTextSize="14sp"
-            app:autoSizeMinTextSize="12sp" />
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeTextType="uniform" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/touchlock_pref"
+        style="@style/SettingPrefLayoutStyle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/SettingPrefLayoutStyle">
+        android:layout_height="wrap_content">
 
         <Switch
             android:id="@+id/touchlock_pref_switch"
             style="@style/Widget.Wear.RoundSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_alignTop="@id/touchlock_pref_switch"
+            android:layout_alignParentStart="true"
             android:layout_marginEnd="8dp"
             android:clickable="false"
             android:src="@drawable/ic_touch_lock"
@@ -74,8 +74,8 @@
             android:id="@+id/touchlock_pref_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/touchlock_pref_switch"
             android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/touchlock_pref_switch"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
             android:gravity="center_vertical"
@@ -83,9 +83,9 @@
             android:text="@string/title_autolaunch_touchlock"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textSize="14sp"
-            app:autoSizeTextType="uniform"
             app:autoSizeMaxTextSize="14sp"
-            app:autoSizeMinTextSize="12sp" />
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeTextType="uniform" />
     </RelativeLayout>
 
 </LinearLayout>
